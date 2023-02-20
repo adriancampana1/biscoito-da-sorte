@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+main {
+    background-color: #fff;
+    padding: 4.8rem 6.4rem;
+
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+/*  */
+
+h1 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    color: #34355b;
+    text-align: center;
+}
+
+p {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    color: #34355b;
+
+    margin: 1.4rem 0 2rem 0;
+}
+
+button {
+    padding: 16px;
+
+    background: #ff9500;
+    border-radius: 4px;
+
+    border: none;
+
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    transition: 0.6s;
+}
+
+button:hover {
+    background: #df8200;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.front-page img {
+    transition: 0.6s;
+}
+
+.front-page img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    animation: treme 0.1s;
+    animation-iteration-count: infinite;
+}
+
+.front-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.7rem;
+
+}
+
+.msg-wrapper{
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+    padding: 10px;
+
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #000000;
+}
+
+/*  */
+
+.hide {
+    display: none;
+}
+
+@keyframes treme {
+    0% {margin-left: 0;}
+    25% {margin-left: 5px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -5px;}
+    100% {margin-left: 0;}
+  }
+
+@keyframes downup{
+    
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio - Biscoito da Sorte</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="front-page">
+            <h1>Qual é a sua sorte de hoje?</h1>
+            <p>Abra o biscoito e descubra!</p>
+            <img id="cookie-front" src="./assets/fortune-cookie.png" alt="imagem de um biscoito da sorte com bilhete dentro" onclick="handleClick()">
+        </div>
+        <div class="back-page hide">
+            <h1>Aqui está a sua sorte de hoje:</h1>
+            <div class="messages-wrapper">
+                <div class="msg-wrapper">
+                </div>
+            </div>
+            <img id="cookie-back" src="./assets/opened-cookie.png" alt="imagem de um biscoito da sorte quebrado">
+            <button id="btn-cookie-back">Abrir outro biscoito</button>
+        </div>
+    </main>
+
+    <script>
+        const frontPage = document.querySelector('.front-page')
+        const backPage = document.querySelector('.back-page')
+
+        
+        const messages = [
+            'Acredite em você!', 
+            'Faça hoje o que vai te orgulhar amanhã',
+            'Fique quieto, silêncio as vezes é ouro',
+            'Sonhos são portas, atitudes são chave',
+            'O segredo de progredir, é começar',
+            'A persistência é o caminho do êxito',
+            'Pense fora da caixa',
+            'O tempo voa, cabe a você ser o piloto',
+            'Você é capaz de coisas incríveis',
+            'Você é o que você pensa'
+        ]
+        
+        let sort = messages[Math.floor(Math.random() * messages.length)]
+
+        let text = document.createTextNode(sort)
+
+        function handleClick(event){
+            //altera o bloco
+            frontPage.classList.add('hide')
+            backPage.classList.remove('hide')
+            
+            const msgWrapper = document.querySelector('.msg-wrapper')
+
+            msgWrapper.appendChild(text)
+
+        }
+
+        //eventos 
+        const cookieFront = document.querySelector('#cookie-front')
+        const btnCookieBack = document.querySelector('#btn-cookie-back')
+
+        cookieFront.addEventListener('click', handleClick)
+        btnCookieBack.addEventListener('click', function() {
+            frontPage.classList.remove('hide')
+            backPage.classList.add('hide')
+
+            window.location.reload(true)
+        })
+    </script>
+</body>
+
+</html>
