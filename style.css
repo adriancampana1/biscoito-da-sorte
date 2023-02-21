@@ -113,6 +113,10 @@ button:hover {
     text-align: center;
 
     color: #000000;
+
+    transition: .6s;
+    animation-name: downtop;
+    animation-duration: 1s;
 }
 
 /*  */
@@ -129,6 +133,14 @@ button:hover {
     100% {margin-left: 0;}
   }
 
-@keyframes downup{
-    
+@keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);;
+    }
 }
